@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "5e8164d9-33ed-49cd-88e0-b47b5d807c6c",
+		"name": "BankTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2818318"
+	},
+	"item": [
+		{
+			"name": "GET Bank Account All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/account_bank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account_bank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Account Bank",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Lily\",\r\n    \"datebirth\":\"1990-01-01\",\r\n    \"address\":\"Jl Panjang 1\",\r\n    \"saldo\":1000.0\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/account_bank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account_bank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Account Bank",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Lily\",\r\n    \"datebirth\":\"1990-01-01\",\r\n    \"address\":\"Jl Panjang 1\",\r\n    \"saldo\":1000.0,\r\n    \"id\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/account_bank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account_bank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Account Bank",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/account_bank/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account_bank",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Account Bank Transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idSource\":1,\r\n    \"idDestination\":2,\r\n    \"transfer\":1000.0\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/account_bank/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account_bank",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
